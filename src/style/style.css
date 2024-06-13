@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  /* Font styles */
+  --ff-primary: "DM Sans";
+  --ff-secondary: "Montserrat";
+
+  /* Colors */
+  --pink: #ea6479;
+  --pink-light: #f198a6;
+  --pink-lighter: #fee1e6;
+
+  --blue-dark: #111827;
+  --white: #ffffff;
+  --purple: #ad00ff;
+  --dark: #151515;
+  --gray: #475467;
+
+  --max-width: 1120px;
+  --max-height: 1000px;
+  --tablet-width: 768px;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+  /* font-family:;
+  color:; */
+  overflow-x: hidden;
+  /* font-smooth: always; */
+
+  /* *::selection {
+    color: $blue;
+    background: $green-light;
+  } */
+
+  /* // *::first-letter {
+  //   text-transform: capitalize;
+  // } */
+
+  /* a,
+  button {
+    font-weight: 400;
+    user-select: none;
+    text-decoration: none;
+    font-family: ;
+    cursor: pointer;
+  }
+  *,
+  :after,
+  :before {
+    box-sizing: inherit;
+  } */
+}
+p {
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
