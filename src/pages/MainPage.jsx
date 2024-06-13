@@ -7,7 +7,7 @@ export default function mainPage() {
     <div>
       <Hero />
       <Section1 />
-      {/* <Section2 /> */}
+      <Section2 />
       {/* <Footer /> */}
     </div>
   );
@@ -18,4 +18,5 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 `;

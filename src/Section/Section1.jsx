@@ -84,6 +84,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     display: block;
     width: 100%;
+    max-width: var(--max-width);
     max-height: var(--max-height);
   }
   .icon1 {
