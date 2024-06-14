@@ -26,15 +26,16 @@ export default function Section1() {
   );
 }
 const Wrapper = styled.div`
-  padding: 1.8rem 5rem;
-  height: 100vh;
+  /* padding: 1.8rem 5rem; */
+  /* height: 100vh; */
   max-height: var(--max-height);
-  margin: 4rem 0;
+  margin: 4rem auto;
+  margin-bottom: 0;
   color: var(--blue-dark);
   .container {
     display: flex;
     padding: 0rem 10.9rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -85,7 +86,7 @@ const Wrapper = styled.div`
     display: block;
     width: 100%;
     max-width: var(--max-width);
-    max-height: var(--max-height);
+    max-height: 700px;
   }
   .icon1 {
     position: absolute;

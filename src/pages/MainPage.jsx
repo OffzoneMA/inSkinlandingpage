@@ -1,6 +1,6 @@
 import React from "react";
 import { Footer, Hero } from "../components";
-import { Section1, Section2 } from "../Section";
+import { Community, Faq, Section1, Section2, Section3 } from "../Section";
 import styled from "styled-components";
 export default function mainPage() {
   return (
@@ -8,6 +8,9 @@ export default function mainPage() {
       <Hero />
       <Section1 />
       <Section2 />
+      <Section3 />
+      <Community />
+      <Faq />
       {/* <Footer /> */}
     </div>
   );

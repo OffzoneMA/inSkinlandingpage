@@ -56,26 +56,27 @@ export default function Section2() {
 }
 const Wrapper = styled.section`
   /* background-color: red; */
-  max-height: var(--max-height);
-  height: 100vh;
-  min-height: 100vh;
+  /* max-height: var(--max-height); */
+  /* height: 100vh;
+  min-height: 100vh; */
   padding: 1.8rem 5rem;
+  padding-top: 0;
   margin: 0 auto;
   display: block;
-  padding: 1.8rem 5rem;
+  /* padding: 1.8rem 5rem; */
   .container {
     max-width: var(--max-width);
     margin: 0 auto;
     /* margin: 3rem auto; */
     h1 {
-      /* font-feature-settings: "liga" off;
+      font-feature-settings: "liga" off;
       align-self: stretch;
       font-family: Inter;
       font-size: 3rem;
       font-style: normal;
       font-weight: 700;
-      line-height: 150%; /* 4.5rem */
-      /* letter-spacing: -0.075rem;  */
+      line-height: 150%;
+      letter-spacing: -0.075rem;
     }
   }
   .icon {
@@ -91,7 +92,7 @@ const Wrapper = styled.section`
     margin: 2.6rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     gap: 2.6rem;
     grid-template-areas:
       "a b"

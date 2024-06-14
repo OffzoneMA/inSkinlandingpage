@@ -14,14 +14,26 @@
   --blue-dark: #111827;
   --white: #ffffff;
   --purple: #ad00ff;
+  --purple-light: #d0a6fa;
   --dark: #151515;
   --gray: #475467;
   --gray-100: #f2f4f7;
+  --Gray-400: #98a2b3;
+  --Neutral-700: #374151;
 
   --max-width: 1120px;
-  --max-height: 1000px;
+  --max-height: 800px;
   --tablet-width: 768px;
+  --swiper-pagination-color: var(--purple);
+  --swiper-pagination-bottom: 0;
 }
+/* .swiper-pagination {
+  position: absolute;
+  top: 0;
+}
+.swiper-wrapper {
+  position: static;
+} */
 *,
 ::after,
 ::before {
