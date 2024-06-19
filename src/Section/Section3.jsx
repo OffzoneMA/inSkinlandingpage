@@ -65,7 +65,7 @@ const Wrapper = styled.section`
   height: 100vh;
   /* min-height: 100vh; */
   margin: 0 auto;
-  display: block;
+  /* display: block; */
   /* padding: 1.8rem 5rem; */
   max-height: var(--max-height);
   .container {
@@ -124,5 +124,18 @@ const Wrapper = styled.section`
       flex-direction: column;
       gap: 0.3rem;
     }
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+      .row {
+        flex-direction: column;
+      }
+      /* margin-bottom: 100rem; */
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
   }
 `;

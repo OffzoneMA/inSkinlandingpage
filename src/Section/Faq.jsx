@@ -138,6 +138,9 @@ const Wrapper = styled.section`
       }
     }
   }
+  @media (max-width: 768px) {
+    padding: 2rem 2rem;
+  }
 `;
 const data = [
   {

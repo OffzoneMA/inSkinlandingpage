@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { RattingComment } from "../components";
-// import React, { useRef, useState } from "react";
+// import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,6 +15,16 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 export default function Community() {
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 768px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
+  console.log(matches);
   return (
     <Wrapper>
       <div className="container">
@@ -44,7 +55,7 @@ export default function Community() {
           <div className="comments">
             <Swiper
               className="comments"
-              slidesPerView={3}
+              slidesPerView={matches ? 3 : 1}
               spaceBetween={30}
               // centeredSlides={true}
               autoplay={{
@@ -133,7 +144,6 @@ const Wrapper = styled.section`
   height: 100vh;
   max-height: var(--max-height);
   min-height: 500px;
-  margin: 0 auto;
   display: block;
   padding: 1.8rem 5rem;
   background: var(--purple-light);
@@ -153,7 +163,7 @@ const Wrapper = styled.section`
     p {
       color: var(--white);
       text-align: center;
-      font-family: "DM Sans";
+      font-family: var(--ff-primary);
       font-size: 1.125rem;
       font-style: normal;
       font-weight: 400;
@@ -231,5 +241,35 @@ const Wrapper = styled.section`
     p {
       z-index: 999;
     }
+    @media (max-width: 768px) {
+      .pic4 {
+        left: -3rem;
+      }
+
+      .pic5 {
+        left: -2rem;
+      }
+
+      .pic6 {
+        left: -2rem;
+      }
+
+      .pic7 {
+        right: -3rem;
+      }
+
+      .pic8 {
+        right: -2rem;
+      }
+
+      .pic9 {
+        right: -1rem;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    margin-top: 40rem;
+    /* height: min-content; */
+    padding: 2rem 3rem;
   }
 `;

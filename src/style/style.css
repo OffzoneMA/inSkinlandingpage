@@ -10,6 +10,7 @@
   --pink: #ea6479;
   --pink-light: #f198a6;
   --pink-lighter: #fee1e6;
+  --pink-lighter1: #f2d5d7;
 
   --blue-dark: #111827;
   --white: #ffffff;
@@ -18,8 +19,11 @@
   --dark: #151515;
   --gray: #475467;
   --gray-100: #f2f4f7;
-  --Gray-400: #98a2b3;
+  --gray-400: #98a2b3;
+  --gray-600: #3c3d49;
+  --gray-800: #1d2939;
   --Neutral-700: #374151;
+  --Neutral-900: #111827;
 
   --max-width: 1120px;
   --max-height: 800px;

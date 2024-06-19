@@ -34,6 +34,8 @@ const Wrapper = styled.div`
     }
   }
   @media (max-width: 768px) {
+    padding: 0;
+    gap: 0rem;
     .links {
       display: none;
     }

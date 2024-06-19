@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-export default function TermsOfUse() {
+export default function LegalNotice() {
   return (
     <Wrapper>
       <div className="container">
-        <h1>Terms of Use</h1>
+        <h1>Legal Notice</h1>
         <div className="title">Preamble</div>
         <p>
           The protection and confidentiality of your data are of paramount

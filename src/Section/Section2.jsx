@@ -17,7 +17,7 @@ export default function Section2() {
               reviews from makeup enthusiasts.
             </p>
             <div className="image">
-              <img src="../image/iphone.svg" alt="" className="" />
+              <img src="../image/iphone1.svg" alt="" className="" />
             </div>
           </div>
           <div className="card card2">
@@ -78,7 +78,15 @@ const Wrapper = styled.section`
       line-height: 150%;
       letter-spacing: -0.075rem;
     }
+    @media (max-width: 768px) {
+      padding: 2rem 1rem;
+      h1 {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+    }
   }
+
   .icon {
     width: 4rem;
     height: 4rem;
@@ -97,6 +105,7 @@ const Wrapper = styled.section`
     grid-template-areas:
       "a b"
       "c c";
+
     .card {
       display: flex;
       padding: 2.8rem;
@@ -126,6 +135,12 @@ const Wrapper = styled.section`
         font-weight: 700;
         line-height: 130%;
         letter-spacing: -0.05rem;
+      }
+      @media (max-width: 768px) {
+        h2 {
+          font-weight: 500;
+          font-size: 1.8rem;
+        }
       }
     }
     .row-card {
@@ -161,6 +176,58 @@ const Wrapper = styled.section`
     }
     .title {
       align-self: stretch;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+
+      grid-template-areas:
+        "a"
+        "b"
+        "c";
+      .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      p {
+        margin-left: 6rem;
+        font-size: 1.4rem;
+      }
+      @media (max-width: 768px) {
+        .row-card {
+          flex-direction: column;
+          height: 40rem;
+          /* align-items: flex-start; */
+          div {
+            width: 100%;
+            div {
+              display: flex;
+              flex-direction: row;
+            }
+          }
+          .image {
+            img {
+              /* position: absolute; */
+              height: 50%;
+              top: auto;
+              bottom: -5rem;
+              left: 5rem;
+            }
+          }
+        }
+      }
+    }
+    .card {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+    margin-top: 26rem;
+    h2 {
+      font-weight: 400;
+      font-size: 1.8rem;
     }
   }
 `;

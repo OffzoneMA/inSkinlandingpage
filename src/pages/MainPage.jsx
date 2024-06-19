@@ -5,13 +5,11 @@ import styled from "styled-components";
 export default function mainPage() {
   return (
     <div>
-      <Hero />
       <Section1 />
       <Section2 />
       <Section3 />
       <Community />
       <Faq />
-      {/* <Footer /> */}
     </div>
   );
 }

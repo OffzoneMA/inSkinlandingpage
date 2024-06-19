@@ -69,6 +69,27 @@ const Wrapper = styled.section`
         }
       }
     }
+    @media (max-width: 768px) {
+      .info {
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        padding-top: 25%;
+        h1 {
+          text-align: center;
+          font-size: 2.5rem;
+        }
+        p {
+          text-align: center;
+        }
+        .links {
+          align-self: center;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 1rem 1.2rem;
   }
 `;
 export default Hero;

@@ -43,7 +43,6 @@ const Wrapper = styled.div`
     align-self: stretch;
     h2 {
       text-align: center;
-      font-feature-settings: "liga" off;
       font-family: Inter;
       font-size: 2.625rem;
       font-style: normal;
@@ -76,6 +75,16 @@ const Wrapper = styled.div`
       align-items: center;
       position: relative;
     }
+    @media (max-width: 768px) {
+      padding: 2rem 1rem;
+      h2 {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      h3 {
+        width: 100%;
+      }
+    }
   }
   .image {
     background-image: url("/image/Ellipse.svg");
@@ -87,6 +96,14 @@ const Wrapper = styled.div`
     width: 100%;
     max-width: var(--max-width);
     max-height: 700px;
+  }
+  @media (max-width: 768px) {
+    margin: 0;
+    .image {
+      width: 200%;
+      left: -50%;
+      position: absolute;
+    }
   }
   .icon1 {
     position: absolute;
