@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { Navbar } from "../components";
+import { useLanguage } from "../LanguageContext";
+
 function Hero() {
+  const { language } = useLanguage();
+
   return (
     <Wrapper>
       <Navbar />
       <div className="container">
         <div className="info">
-          <h1>Explore Elegance in Your Own Way</h1>
-          <p>
-            InSkin is your companion for selecting, enhancing, and sharing the
-            splendor of your cosmetic discoveries with the world.
-          </p>
+          <h1>{doc[language].h1}</h1>
+          <p>{doc[language].p}</p>
           <div className="links">
             <a href="/">
               <img src="../image/app_store_en.svg" alt="" />
@@ -21,6 +22,7 @@ function Hero() {
             </a>
           </div>
         </div>
+        <div className="img"></div>
       </div>
     </Wrapper>
   );
@@ -30,7 +32,30 @@ const Wrapper = styled.section`
   height: 100vh;
   max-height: var(--max-height);
   background: url("/image/Background-hero.svg") center/cover no-repeat;
+  /* display: flex;
+  flex-direction: column; */
+  .img {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .img {
+      display: block;
+      background: url("/image/Background-hero.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%;
+      width: 190%;
+      position: absolute;
+      left: -85%;
+      margin-top: -2rem;
+      z-index: 0;
+    }
+    background: var(--gradient);
+    margin-bottom: 70%;
+  }
   .container {
+    @media (max-width: 768px) {
+    }
     max-width: var(--max-width);
     margin: 0 auto;
     .info {
@@ -66,6 +91,8 @@ const Wrapper = styled.section`
         img {
           background: var(--dark);
           border-radius: 0.5rem;
+          z-index: 1;
+          position: relative;
         }
       }
     }
@@ -93,3 +120,13 @@ const Wrapper = styled.section`
   }
 `;
 export default Hero;
+const doc = {
+  en: {
+    h1: "Explore Elegance in Your Own Way",
+    p: "InSkin is your companion for selecting, enhancing, and sharing the splendor of your cosmetic discoveries with the world.",
+  },
+  fr: {
+    h1: "Explorez l'élégance à votre manière",
+    p: "InSkin vous accompagne pour choisir, sublimer et partager la splendeur de vos découvertes cosmétiques avec le monde.",
+  },
+};

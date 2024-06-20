@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { useLanguage } from "../LanguageContext";
+
 export default function Section2() {
+  const { language } = useLanguage();
+
   return (
     <Wrapper>
       <div className="container">
-        <h1>Discover the InSkin experience now!</h1>
+        <h1>{doc[language].header}</h1>
         <div className="grid">
           <div className="card card1">
             <div className="title">
               <img src="../image/Frame17.svg" alt="" className="icon" />
-              <h2>Scan in an instant</h2>
+              <h2>{doc[language].title1}</h2>
             </div>
-            <p>
-              Utilize InSkin's scanning feature to swiftly access essential
-              information about your favorite cosmetic products, as well as
-              reviews from makeup enthusiasts.
-            </p>
+            <p>{doc[language].p1}</p>
             <div className="image">
               <img src="../image/iphone1.svg" alt="" className="" />
             </div>
@@ -23,12 +23,9 @@ export default function Section2() {
           <div className="card card2">
             <div className="title">
               <img src="../image/Frame18.svg" alt="" className="icon" />
-              <h2>Enhance your beauty</h2>
+              <h2>{doc[language].title2}</h2>
             </div>
-            <p>
-              Uncover tips for selecting your makeup products and receive
-              personalized recommendations to enhance your natural beauty.
-            </p>
+            <p>{doc[language].p2}</p>
             <div className="image">
               <img src="../image/women.svg" alt="" />
             </div>
@@ -37,13 +34,9 @@ export default function Section2() {
             <div>
               <div className="title">
                 <img src="../image/Frame19.svg" alt="" className="icon" />
-                <h2>Choose with wisdom</h2>
+                <h2>{doc[language].title3}m</h2>
               </div>
-              <p>
-                InSkin guides you in selecting products suited to your style and
-                skin, enabling you to make informed choices for your beauty
-                routine and organize your preferences by category.
-              </p>
+              <p>{doc[language].p3}</p>
             </div>
             <div className="image">
               <img src="../image/image3.svg" alt="" />
@@ -231,3 +224,23 @@ const Wrapper = styled.section`
     }
   }
 `;
+const doc = {
+  en: {
+    header: "Discover the InSkin experience now!",
+    title1: "Scan in an instant",
+    p1: "Utilize InSkin's scanning feature to swiftly access essential information about your favorite cosmetic products, as well as reviews from makeup enthusiasts.",
+    title2: "Enhance your beauty",
+    p2: "Uncover tips for selecting your makeup products and receive personalized recommendations to enhance your natural beauty.",
+    title3: "Choose with wisdom",
+    p3: "InSkin guides you in selecting products suited to your style and skin, enabling you to make informed choices for your beauty routine and organize your preferences by category.",
+  },
+  fr: {
+    header: "Découvrez l'expérience InSkin maintenant!",
+    title1: "Scannez en un instant",
+    p1: "Utilisez la fonction de scan InSkin pour accéder rapidement aux informations essentielles sur vos produits cosmétiques préférés. Ainsi qu’aux avis des passionnées du maquillage.",
+    title2: "Sublimez votre Beauté",
+    p2: "Découvrez des conseils pour choisir vos produits de maquillage et recevez des recommandations personnalisées pour sublimer votre beauté naturelle.",
+    title3: "Choisissez avec sagesse",
+    p3: "InSkin vous guide dans le choix des produits adaptés à votre style et à votre peau, vous permettant de faire des choix éclairés pour votre routine beauté et d’organiser vos préférences par catégorie.",
+  },
+};

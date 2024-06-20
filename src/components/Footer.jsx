@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import ButtonPrimary from "./ButtonPrimary";
 import Logo from "./Logo";
+import { useLanguage } from "../LanguageContext";
+import { Link } from "react-router-dom";
+
 export default function Footer() {
+  const { language } = useLanguage();
+
   return (
     <Wrapper>
       <div className="container">
@@ -10,11 +15,7 @@ export default function Footer() {
         <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
         <img src="../image/cosmetic3.svg" alt="" className="pic pic3" />
         <div className="row">
-          <h1>
-            As a leader in innovation in the cosmetic industry, InSkin is
-            committed to providing an exceptional, safe, and effective user
-            experience.
-          </h1>
+          <h1>{doc[language].title}</h1>
           <div className="img">
             <img src="../image/iphone.svg" alt="" />
           </div>
@@ -25,28 +26,32 @@ export default function Footer() {
               <img src="../image/message-text.svg" alt="" />
             </div>
             <div className="form">
-              <div className="question">How can we help you?</div>
+              <div className="question">{doc[language].contact.title}</div>
               <div className="inputs">
                 <input
                   type="text"
                   className="name"
-                  placeholder="Enter Full Name"
+                  placeholder={doc[language].contact.inputs[0]}
                 />
                 <input
                   type="email"
                   className="email"
-                  placeholder="Enter your email"
+                  placeholder={doc[language].contact.inputs[1]}
                 />
-                <input type="text" className="subject" placeholder="Subject" />
+                <input
+                  type="text"
+                  className="subject"
+                  placeholder={doc[language].contact.inputs[2]}
+                />
                 <textarea
                   className="message"
-                  placeholder="Write Your Message"
+                  placeholder={doc[language].contact.inputs[3]}
                 />
               </div>
             </div>
             <div className="btn">
               <ButtonPrimary
-                text={"send message"}
+                text={doc[language].contact.button}
                 icon={"../image/arrow-right.svg"}
               />
             </div>
@@ -55,25 +60,34 @@ export default function Footer() {
               <div className="logo">
                 <Logo />
               </div>
+
               <div className="items">
                 <div className="info">
-                  <h4>Project</h4>
-                  <a href="#">team</a>
-                  <a href="#">independence</a>
+                  <h4>{doc[language].links.project.title}</h4>
+                  {doc[language].links.project.items.map((item, index) => (
+                    <a key={index} href="#">
+                      {item}
+                    </a>
+                  ))}
                 </div>
                 <div className="info">
-                  <h4>Application</h4>
-                  <a href="#">Features</a>
-                  <a href="#">Premium version</a>
-                  <a href="#">Questions ?</a>
+                  <h4>{doc[language].links.application.title}</h4>
+                  {doc[language].links.application.items.map((item, index) => (
+                    <a key={index} href="#">
+                      {item}
+                    </a>
+                  ))}
                 </div>
                 <div className="info">
-                  <h4>Useful links</h4>
-                  <a href="#">Contact us</a>
-                  <a href="#">Press</a>
-                  <a href="#">Legal notice</a>
+                  <h4>{doc[language].links.usefulLinks.title}</h4>
+                  {doc[language].links.usefulLinks.items.map((item, index) => (
+                    <a key={index} href="#">
+                      {item}
+                    </a>
+                  ))}
                 </div>
               </div>
+
               <div className="links">
                 <a href="/">
                   <img src="../image/app_store_en.svg" alt="" />
@@ -86,11 +100,25 @@ export default function Footer() {
           </div>
         </div>
         <div className="copyrights">
-          <div className="copyright">
+          {/* <div className="copyright">
             <p>© {new Date().getFullYear()} InSkin - All rights reserved</p> |{" "}
             <a href="privacy-policy">Privacy Policy</a> |{" "}
             <a href="terms-of-use"> Terms of Use </a> |{" "}
             <a href="legal-notice"> Legal Notice </a>
+          </div> */}
+          <div className="copyright">
+            <p>{doc[language].copyrights[0]}</p> |{" "}
+            <Link to="/privacy-policy" onClick={() => window.scrollTo(0, 0)}>
+              {doc[language].copyrights[1]}
+            </Link>{" "}
+            |{" "}
+            <Link to="/terms-of-use" onClick={() => window.scrollTo(0, 0)}>
+              {doc[language].copyrights[2]}
+            </Link>{" "}
+            |{" "}
+            <Link to="/legal-notice" onClick={() => window.scrollTo(0, 0)}>
+              {doc[language].copyrights[3]}
+            </Link>
           </div>
           <div className="social-links">
             <a href="">
@@ -124,6 +152,7 @@ const Wrapper = styled.div`
     .pic {
       position: absolute;
       z-index: 1;
+      animation: moveUpDown 4s ease-in-out infinite;
     }
     .pic1 {
       left: -16rem;
@@ -135,7 +164,7 @@ const Wrapper = styled.div`
     }
     .pic3 {
       top: -11rem;
-      right: 18rem;
+      right: 22rem;
     }
 
     .row {
@@ -186,6 +215,11 @@ const Wrapper = styled.div`
         .info {
           display: flex;
           flex-direction: column;
+          @media (max-width: 768px) {
+            a {
+              font-size: 0.8rem;
+            }
+          }
         }
         h4 {
           color: var(--gray-800);
@@ -284,27 +318,38 @@ const Wrapper = styled.div`
     }
     @media (max-width: 768px) {
       .row {
-        .img > img {
+        .img {
           display: none;
         }
         h1 {
           text-align: center;
+          /* width: 100%; */
+          padding: 1rem;
+          align-self: center;
+          position: relative;
+          z-index: 999;
         }
       }
       .pic1 {
-        left: 19rem;
-        top: -3rem;
+        left: -8rem;
+        top: 8rem;
+        width: 60%;
+        z-index: 0;
       }
       .pic2 {
         left: -11rem;
         top: 17rem;
+        display: none;
       }
       .pic3 {
         top: -11rem;
         right: 18rem;
+        display: none;
       }
       .contact {
         .form {
+          z-index: 999;
+          position: relative;
           flex-direction: column;
           gap: 3rem;
           align-items: center;
@@ -376,4 +421,84 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     padding: 2rem 1rem;
   }
+
+  @keyframes moveUpDown {
+    0%,
+    100% {
+      transform: translateY(5px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
 `;
+const doc = {
+  en: {
+    title:
+      "As a leader in innovation in the cosmetic industry, InSkin is committed to providing an exceptional, safe, and effective user experience.",
+    contact: {
+      title: "How can we help you?",
+      inputs: [
+        "Enter Full Name",
+        "Enter your email",
+        "Subject",
+        "Write Your Message",
+      ],
+      button: "send message",
+    },
+    links: {
+      project: {
+        title: "Project",
+        items: ["team", "independence"],
+      },
+      application: {
+        title: "Application",
+        items: ["Features", "Premium version", "Questions ?"],
+      },
+      usefulLinks: {
+        title: "Useful links",
+        items: ["Contact us", "Press", "Legal notice"],
+      },
+    },
+    copyrights: [
+      `© ${new Date().getFullYear()} InSkin - All rights reserved`,
+      "Privacy Policy",
+      "Terms of Use",
+      "Legal Notice",
+    ],
+  },
+  fr: {
+    title:
+      "En tant que leader de l'innovation dans l'industrie cosmétique, InSkin s'engage à fournir une expérience utilisateur exceptionnelle, sûre et efficace.",
+    contact: {
+      title: "Comment pouvons-nous vous aider ?",
+      inputs: [
+        "Saisissez votre nom complet",
+        "Saisissez votre adresse e-mail",
+        "Objet",
+        "Rédigez votre message",
+      ],
+      button: "envoyer le message",
+    },
+    links: {
+      project: {
+        title: "Projet",
+        items: ["équipe", "indépendance"],
+      },
+      application: {
+        title: "Application",
+        items: ["Fonctionnalités", "Version premium", "Des questions ?"],
+      },
+      usefulLinks: {
+        title: "Liens utiles",
+        items: ["Contactez-nous", "Presse", "Mentions légales"],
+      },
+    },
+    copyrights: [
+      `© ${new Date().getFullYear()} InSkin - Tous droits réservés`,
+      "Politique de confidentialité",
+      "Conditions d'utilisation",
+      "Mentions légales",
+    ],
+  },
+};

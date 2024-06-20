@@ -14,7 +14,11 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
+import { useLanguage } from "../LanguageContext";
+
 export default function Community() {
+  const { language } = useLanguage();
+
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 768px)").matches
   );
@@ -49,7 +53,7 @@ export default function Community() {
             <img src="../image/whiteStar.svg" alt="" />
             <img src="../image/whiteStar.svg" alt="" />
             <small>
-              <span>4,7/5 </span> ● <span>300,000 reviews</span>
+              <span>4,7/5 </span> ● <span>{doc[language].review}</span>
             </small>
           </div>
           <div className="comments">
@@ -67,7 +71,19 @@ export default function Community() {
               }}
               modules={[Autoplay, Pagination]}
             >
-              <SwiperSlide>
+              {doc[language].comments.map((comment, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <RattingComment
+                      name={comment.name}
+                      starsNum={comment.starsNum}
+                      img={comment.img}
+                      comment={comment.comment}
+                    />
+                  </SwiperSlide>
+                );
+              })}
+              {/* <SwiperSlide>
                 <RattingComment
                   name={"Jane Cooper"}
                   starsNum={5}
@@ -76,57 +92,7 @@ export default function Community() {
                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con"
                   }
                 />
-              </SwiperSlide>
-              <SwiperSlide>
-                <RattingComment
-                  name={"Cameron Williamson"}
-                  starsNum={5}
-                  img={"../image/profile2.svg"}
-                  comment={
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con"
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <RattingComment
-                  name={"Jenny Wilson"}
-                  starsNum={5}
-                  img={"../image/profile3.svg"}
-                  comment={
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con"
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <RattingComment
-                  name={"Jane Cooper"}
-                  starsNum={5}
-                  img={"../image/profile1.svg"}
-                  comment={
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con"
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <RattingComment
-                  name={"Cameron Williamson"}
-                  starsNum={5}
-                  img={"../image/profile2.svg"}
-                  comment={
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con"
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <RattingComment
-                  name={"Jenny Wilson"}
-                  starsNum={5}
-                  img={"../image/profile3.svg"}
-                  comment={
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con"
-                  }
-                />
-              </SwiperSlide>
+              </SwiperSlide> */}
             </Swiper>
           </div>
         </div>
@@ -159,6 +125,11 @@ const Wrapper = styled.section`
       font-weight: 700;
       line-height: 150%;
       letter-spacing: -0.075rem;
+      @media (max-width: 768px) {
+        text-align: center;
+        font-size: 2.25rem;
+        font-weight: 400;
+      }
     }
     p {
       color: var(--white);
@@ -269,7 +240,106 @@ const Wrapper = styled.section`
   }
   @media (max-width: 768px) {
     margin-top: 40rem;
-    /* height: min-content; */
+    height: 120vh;
     padding: 2rem 3rem;
   }
 `;
+const doc = {
+  en: {
+    h1: "Join a community of +2 million users",
+    p: "Explore together a world of discoveries, sharing and enriching exchanges",
+    review: "300,000 avis",
+    comments: [
+      {
+        name: "Jane Cooper",
+        starsNum: 5,
+        img: "../image/profile1.svg",
+        comment:
+          "InSkin completely transformed my skincare and makeup routine. The scan tool is...",
+      },
+      {
+        name: "Cameron Williamson",
+        starsNum: 5,
+        img: "../image/profile2.svg",
+        comment:
+          "InSkin makes searching for cosmetic products easier than ever. The quick scan of labels allows me...",
+      },
+      {
+        name: "Jenny Wilson",
+        starsNum: 5,
+        img: "../image/profile3.svg",
+        comment:
+          "As a devoted user of InSkin, I am impressed with the accuracy of the scan. I particularly appreciate...",
+      },
+      {
+        name: "Jane Cooper",
+        starsNum: 5,
+        img: "../image/profile1.svg",
+        comment:
+          "InSkin completely transformed my skincare and makeup routine. The scan tool is...",
+      },
+      {
+        name: "Cameron Williamson",
+        starsNum: 5,
+        img: "../image/profile2.svg",
+        comment:
+          "InSkin makes searching for cosmetic products easier than ever. The quick scan of labels allows me...",
+      },
+      {
+        name: "Jenny Wilson",
+        starsNum: 5,
+        img: "../image/profile3.svg",
+        comment:
+          "As a devoted user of InSkin, I am impressed with the accuracy of the scan. I particularly appreciate...",
+      },
+    ],
+  },
+  fr: {
+    h1: "Rejoignez une communauté de +2M d'utilisateurs",
+    p: "Explorez ensemble un monde de découvertes, de partages et d'échanges enrichissants",
+    comments: [
+      {
+        name: "Jane Cooper",
+        starsNum: 5,
+        img: "../image/profile1.svg",
+        comment:
+          "InSkin a complètement transformé ma routine de soins de la peau et de maquillage. L'outil de scan est...",
+      },
+      {
+        name: "Cameron Williamson",
+        starsNum: 5,
+        img: "../image/profile2.svg",
+        comment:
+          "InSkin rend la recherche de produits cosmétiques plus facile que jamais. Le scan rapide des étiquettes me...",
+      },
+      {
+        name: "Jenny Wilson",
+        starsNum: 5,
+        img: "../image/profile3.svg",
+        comment:
+          "En tant que fervent utilisateur d'InSkin, je suis impressionnée par la précision du scan. J'apprécie particulièrement...",
+      },
+      {
+        name: "Jane Cooper",
+        starsNum: 5,
+        img: "../image/profile1.svg",
+        comment:
+          "InSkin a complètement transformé ma routine de soins de la peau et de maquillage. L'outil de scan est...",
+      },
+      {
+        name: "Cameron Williamson",
+        starsNum: 5,
+        img: "../image/profile2.svg",
+        comment:
+          "InSkin rend la recherche de produits cosmétiques plus facile que jamais. Le scan rapide des étiquettes me...",
+      },
+      {
+        name: "Jenny Wilson",
+        starsNum: 5,
+        img: "../image/profile3.svg",
+        comment:
+          "En tant que fervent utilisateur d'InSkin, je suis impressionnée par la précision du scan. J'apprécie particulièrement...",
+      },
+    ],
+  },
+};

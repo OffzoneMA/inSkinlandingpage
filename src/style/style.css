@@ -25,6 +25,13 @@
   --Neutral-700: #374151;
   --Neutral-900: #111827;
 
+  --gradient: linear-gradient(
+    190deg,
+    #fcf3ee 16.16%,
+    #fbf1eb 52.78%,
+    #eeded1 104.03%
+  );
+
   --max-width: 1120px;
   --max-height: 800px;
   --tablet-width: 768px;

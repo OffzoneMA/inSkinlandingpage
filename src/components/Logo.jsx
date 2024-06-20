@@ -1,8 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+
 export default function Logo() {
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/");
+  };
+
   return (
-    <Wrapper>
+    <Wrapper onClick={goHome}>
       <div className="container">
         <img src="../image/subtract1.svg" alt="" />
         <img src="../image/subtract2.svg" alt="" />
@@ -21,6 +29,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
   .container {
     display: flex;
     justify-content: center;

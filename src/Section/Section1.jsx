@@ -1,23 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import ButtonPrimary from "../components/ButtonPrimary";
+import { useLanguage } from "../LanguageContext";
+
 export default function Section1() {
+  const { language } = useLanguage();
+
   return (
     <Wrapper>
       <div className="container">
-        <h2>Embark on a new dimension of elegance with InSkin</h2>
-        <h3>
-          Our groundbreaking app guides you through the world of cosmetics,
-          helping you choose, enhance, and share your discoveries in a unique
-          manner.
-        </h3>
+        <h2>{doc[language].h2}</h2>
+        <h3>{doc[language].h3}</h3>
         <div className="center">
           <h1 className="number">82,915,082</h1>
-          <p>Products saved by our users</p>
-          <img className="icon2" src="../image/heartemoji.svg" alt="" />
-          <img className="icon1" src="../image/cosmetic111.svg" alt="" />
+          <p>{doc[language].p} </p>
+          <img className="icon2 icon" src="../image/heartemoji.svg" alt="" />
+          <img className="icon1 icon" src="../image/cosmetic111.svg" alt="" />
         </div>
-        <ButtonPrimary text={"get started now"} />
+        <ButtonPrimary text={doc[language].btn} />
+        <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
+        <img src="../image/cosmetic3.svg" alt="" className="pic pic3" />
       </div>
       <div className="image">
         {/* <img src="../image/Ellipse.svg" alt="" /> */}
@@ -32,6 +34,9 @@ const Wrapper = styled.div`
   margin: 4rem auto;
   margin-bottom: 0;
   color: var(--blue-dark);
+  .pic {
+    display: none;
+  }
   .container {
     display: flex;
     padding: 0rem 10.9rem;
@@ -104,6 +109,23 @@ const Wrapper = styled.div`
       left: -50%;
       position: absolute;
     }
+    position: relative;
+    .pic {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25%;
+      animation: moveUpDown 3s ease-in-out infinite;
+    }
+    .pic2 {
+      left: 24rem;
+      top: 18rem;
+    }
+    .pic3 {
+      left: -2rem;
+      top: 19rem;
+    }
   }
   .icon1 {
     position: absolute;
@@ -115,4 +137,30 @@ const Wrapper = styled.div`
     right: -18rem;
     top: 0rem;
   }
+  .icon {
+    animation: moveUpDown 2.4s ease-in-out infinite;
+  }
+  @keyframes moveUpDown {
+    0%,
+    100% {
+      transform: translateY(5px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
 `;
+const doc = {
+  en: {
+    h2: "Embark on a new dimension of elegance with InSkin",
+    h3: "Our groundbreaking app guides you through the world of cosmetics, helping you choose, enhance, and share your discoveries in a unique manner.",
+    p: "Products saved by our users",
+    btn: "get started now",
+  },
+  fr: {
+    h2: "Explorez une nouvelle dimension de l'élégance avec InSkin",
+    h3: "Notre application révolutionnaire vous guide dans l'univers des cosmétiques, vous aidant à choisir, sublimer et partager vos découvertes de manière unique.",
+    p: "Produits enregistrés par nos utilisateurs",
+    btn: "commencer maintenant",
+  },
+};
