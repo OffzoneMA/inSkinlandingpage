@@ -20,4 +20,5 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  overflow-x: hidden;
 `;

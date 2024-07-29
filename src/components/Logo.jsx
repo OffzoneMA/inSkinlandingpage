@@ -12,12 +12,13 @@ export default function Logo() {
   return (
     <Wrapper onClick={goHome}>
       <div className="container">
-        <img src="../image/subtract1.svg" alt="" />
+        {/* <img src="../image/subtract1.svg" alt="" />
         <img src="../image/subtract2.svg" alt="" />
         <img src="../image/subtract3.svg" alt="" />
         <img src="../image/subtract4.svg" alt="" />
         <img src="../image/subtract5.svg" alt="" />
-        <img src="../image/subtract6.svg" alt="" />
+        <img src="../image/subtract6.svg" alt="" /> */}
+        <img src="../image/logo.svg" alt="" />
       </div>
       <p>Unveil the elegance</p>
     </Wrapper>
@@ -35,6 +36,10 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+  }
+  /* if logo is one group */
+  img {
+    width: 9rem;
   }
   p {
     color: #333;

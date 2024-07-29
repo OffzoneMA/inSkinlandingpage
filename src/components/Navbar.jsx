@@ -18,14 +18,16 @@ export default function Navbar() {
       </div>
       <div className="btn">
         <ButtonPrimary text={doc[language].btn} />
-        <button type="button" onClick={toggleLanguage} className="languageBtn">
-          {language == "en" ? "FR" : "ENG"}
-        </button>
+        <ButtonPrimary
+          text={language == "en" ? "FR" : "ENG"}
+          func={toggleLanguage}
+        />
       </div>
     </Wrapper>
   );
 }
 const Wrapper = styled.div`
+  font-size: 1rem;
   padding: 0 2rem;
   max-width: 1480px;
   margin: 0 auto;
@@ -34,11 +36,13 @@ const Wrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 3rem;
+  /* z-index: 999; */
   .links {
     display: flex;
     gap: 1.7rem;
     a {
       color: var(--blue-dark);
+      font-size: clamp(1rem, 1.4vw, 2rem);
     }
   }
   @media (max-width: 768px) {
@@ -46,6 +50,12 @@ const Wrapper = styled.div`
     gap: 0rem;
     .links {
       display: none;
+    }
+  }
+  @media (min-width: 2300px) {
+    .links a {
+      font-size: 2rem;
+      /* font-size: clamp(1.5rem, 1vw, 3rem); */
     }
   }
   .btn {

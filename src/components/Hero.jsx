@@ -22,7 +22,9 @@ function Hero() {
             </a>
           </div>
         </div>
-        <div className="img"></div>
+        <div className="imgC">
+          <img src="../image/Background-hero.svg" alt="" />
+        </div>
       </div>
     </Wrapper>
   );
@@ -30,30 +32,45 @@ function Hero() {
 const Wrapper = styled.section`
   padding: 1.8rem 5rem;
   height: 100vh;
-  max-height: var(--max-height);
+  max-height: 1300px;
   background: url("/image/Background-hero.svg") center/cover no-repeat;
   /* display: flex;
   flex-direction: column; */
-  .img {
-    display: none;
-  }
+  overflow-x: hidden;
   @media (max-width: 768px) {
-    .img {
-      display: block;
+    background: var(--gradient);
+    height: auto;
+    max-height: fit-content;
+    padding-bottom: 0;
+  }
+  .container {
+    .imgC {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .imgC {
+        /* width: 100%;
+        height: 100%; */
+        display: block;
+        transform: translateX(calc(-5rem + -200%));
+        img {
+          width: 400%;
+        }
+      }
+      .img {
+        /* display: block;
       background: url("/image/Background-hero.svg");
       background-repeat: no-repeat;
       background-size: contain;
       height: 100%;
-      width: 190%;
+      width: 100%;
       position: absolute;
       left: -85%;
       margin-top: -2rem;
-      z-index: 0;
+      z-index: 0; */
+      }
+      /* margin-bottom: 70%; */
     }
-    background: var(--gradient);
-    margin-bottom: 70%;
-  }
-  .container {
     @media (max-width: 768px) {
     }
     max-width: var(--max-width);
@@ -115,9 +132,9 @@ const Wrapper = styled.section`
       }
     }
   }
-  @media (max-width: 768px) {
-    padding: 1rem 1.2rem;
-  }
+  /* @media (max-width: 768px) {
+      padding: 1rem 1.2rem;
+    } */
 `;
 export default Hero;
 const doc = {

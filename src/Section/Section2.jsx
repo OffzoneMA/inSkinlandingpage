@@ -58,6 +58,7 @@ const Wrapper = styled.section`
   display: block;
   /* padding: 1.8rem 5rem; */
   .container {
+    overflow: hidden;
     max-width: var(--max-width);
     margin: 0 auto;
     /* margin: 3rem auto; */
@@ -171,8 +172,8 @@ const Wrapper = styled.section`
       align-self: stretch;
     }
     @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-
+      grid-template-columns: 90%;
+      justify-content: center;
       grid-template-areas:
         "a"
         "b"
@@ -212,7 +213,7 @@ const Wrapper = styled.section`
       }
     }
     .card {
-      width: 100%;
+      /* width: 80%; */
     }
   }
   @media (max-width: 768px) {

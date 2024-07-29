@@ -11,6 +11,7 @@
   --pink-light: #f198a6;
   --pink-lighter: #fee1e6;
   --pink-lighter1: #f2d5d7;
+  --pink-dark: #cb4a5f;
 
   --blue-dark: #111827;
   --white: #ffffff;
@@ -33,7 +34,7 @@
   );
 
   --max-width: 1120px;
-  --max-height: 800px;
+  --max-height: 900px;
   --tablet-width: 768px;
   --swiper-pagination-color: var(--purple);
   --swiper-pagination-bottom: 0;
@@ -52,6 +53,11 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 20px;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;

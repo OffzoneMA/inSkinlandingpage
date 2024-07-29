@@ -14,28 +14,28 @@ export default function Section3() {
             <div className="title">{doc[language].header}</div>
             <div className="grid">
               <div className="card">
-                <img src="../image/frame20.svg" alt="" className="icon" />
+                <img src="../image/Frame20.svg" alt="" className="icon" />
                 <div className="info">
                   <h2>{doc[language].title1} </h2>
                   <p>{doc[language].p1}</p>
                 </div>
               </div>
               <div className="card">
-                <img src="../image/frame21.svg" alt="" className="icon" />
+                <img src="../image/Frame21.svg" alt="" className="icon" />
                 <div className="info">
                   <h2>{doc[language].title2} </h2>
                   <p>{doc[language].p2}</p>
                 </div>
               </div>
               <div className="card">
-                <img src="../image/frame22.svg" alt="" className="icon" />
+                <img src="../image/Frame22.svg" alt="" className="icon" />
                 <div className="info">
                   <h2>{doc[language].title3} </h2>
                   <p>{doc[language].p3}</p>
                 </div>
               </div>
               <div className="card">
-                <img src="../image/frame23.svg" alt="" className="icon" />
+                <img src="../image/Frame23.svg" alt="" className="icon" />
                 <div className="info">
                   <h2>{doc[language].title4} </h2>
                   <p>{doc[language].p4}</p>

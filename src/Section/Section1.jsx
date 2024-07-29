@@ -14,12 +14,12 @@ export default function Section1() {
         <div className="center">
           <h1 className="number">82,915,082</h1>
           <p>{doc[language].p} </p>
-          <img className="icon2 icon" src="../image/heartemoji.svg" alt="" />
-          <img className="icon1 icon" src="../image/cosmetic111.svg" alt="" />
+          {/* <img className="icon2 icon" src="../image/heartemoji.svg" alt="" />
+          <img className="icon1 icon" src="../image/cosmetic111.svg" alt="" /> */}
         </div>
         <ButtonPrimary text={doc[language].btn} />
-        <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
-        <img src="../image/cosmetic3.svg" alt="" className="pic pic3" />
+        {/* <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
+        <img src="../image/cosmetic3.svg" alt="" className="pic pic3" /> */}
       </div>
       <div className="image">
         {/* <img src="../image/Ellipse.svg" alt="" /> */}
@@ -34,6 +34,7 @@ const Wrapper = styled.div`
   margin: 4rem auto;
   margin-bottom: 0;
   color: var(--blue-dark);
+  width: 100%;
   .pic {
     display: none;
   }
@@ -104,12 +105,12 @@ const Wrapper = styled.div`
   }
   @media (max-width: 768px) {
     margin: 0;
+    position: relative;
+    overflow: hidden;
     .image {
       width: 200%;
-      left: -50%;
-      position: absolute;
+      transform: translateX(-25%);
     }
-    position: relative;
     .pic {
       display: block;
       position: absolute;
