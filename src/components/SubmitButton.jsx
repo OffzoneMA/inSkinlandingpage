@@ -1,20 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useRef } from "react";
+export default function SubmitButton({ text, icon, func }) {
+  const buttonRef = useRef(null);
 
-export default function ButtonPrimary({ text, icon, func }) {
   return (
     <Wrapper
+      ref={buttonRef}
       href=""
       onClick={(e) => {
         e.preventDefault();
-
-        if (func) {
-          func();
-        }
+        setTimeout(() => {
+          if (buttonRef.current) {
+            buttonRef.current.style.backgroundColor = "#28B617";
+            buttonRef.current.innerText = `${text[1]} `;
+          }
+        }, 1000);
       }}
     >
-      {text}
+      {text[0]}
       {icon ? <img src={icon} alt="icon" /> : null}
     </Wrapper>
   );
@@ -31,12 +36,13 @@ const Wrapper = styled.button`
   cursor: pointer;
   transition: 0.3s;
   border: none;
+
   color: var(--white);
   &:hover {
     background: var(--pink-dark);
   }
   @media (max-width: 768px) {
     padding: 0.5rem 0.76rem;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
   }
 `;

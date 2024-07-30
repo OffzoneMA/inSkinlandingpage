@@ -17,7 +17,7 @@ export default function Section2() {
             </div>
             <p>{doc[language].p1}</p>
             <div className="image">
-              <img src="../image/iphone1.svg" alt="" className="" />
+              <img src="../image/iphone1.svg" alt="" className="phoneImg" />
             </div>
           </div>
           <div className="card card2">
@@ -58,7 +58,7 @@ const Wrapper = styled.section`
   display: block;
   /* padding: 1.8rem 5rem; */
   .container {
-    overflow: hidden;
+    /* overflow: hidden; */
     max-width: var(--max-width);
     margin: 0 auto;
     /* margin: 3rem auto; */
@@ -75,7 +75,7 @@ const Wrapper = styled.section`
     @media (max-width: 768px) {
       padding: 2rem 1rem;
       h1 {
-        font-size: 3rem;
+        font-size: 2.2rem;
         font-weight: 500;
       }
     }
@@ -99,8 +99,8 @@ const Wrapper = styled.section`
     grid-template-areas:
       "a b"
       "c c";
-
     .card {
+      overflow: hidden;
       display: flex;
       padding: 2.8rem;
       padding-bottom: 0;
@@ -114,12 +114,14 @@ const Wrapper = styled.section`
       background: var(--gray-100);
       .image {
         mix-blend-mode: multiply;
-        /* width:s 1fr; */
         img {
           height: 100%;
           width: 100%;
           object-fit: cover;
         }
+      }
+      .phoneImg {
+        transform: translateY(7%);
       }
       h2 {
         color: var(--blue-dark);
@@ -131,9 +133,22 @@ const Wrapper = styled.section`
         letter-spacing: -0.05rem;
       }
       @media (max-width: 768px) {
+        .image {
+          img {
+            transform: translateY(10%);
+          }
+        }
+        .phoneImg {
+          transform: translateY(17%) !important;
+        }
+        padding: 2rem 1.25rem;
+        .icon {
+          width: 3rem;
+          height: 3rem;
+        }
         h2 {
           font-weight: 500;
-          font-size: 1.8rem;
+          font-size: 1.5rem;
         }
       }
     }
@@ -143,6 +158,8 @@ const Wrapper = styled.section`
       text-align: start;
       align-items: flex-start;
       position: relative;
+      overflow: visible !important;
+
       div {
         display: flex;
         flex-direction: column;
@@ -156,6 +173,7 @@ const Wrapper = styled.section`
           overflow: visible;
           z-index: 999;
           top: 0;
+          right: 0;
         }
       }
     }
@@ -167,12 +185,13 @@ const Wrapper = styled.section`
     }
     .card3 {
       grid-area: c;
+      overflow: visible;
     }
     .title {
       align-self: stretch;
     }
     @media (max-width: 768px) {
-      grid-template-columns: 90%;
+      grid-template-columns: 99%;
       justify-content: center;
       grid-template-areas:
         "a"
@@ -182,32 +201,32 @@ const Wrapper = styled.section`
         display: flex;
         flex-direction: row;
         align-items: center;
+        gap: 0.5rem;
       }
 
       p {
-        margin-left: 6rem;
-        font-size: 1.4rem;
+        font-size: 0.8rem;
+        margin-left: 3.5rem;
       }
-      @media (max-width: 768px) {
-        .row-card {
-          flex-direction: column;
-          height: 40rem;
-          /* align-items: flex-start; */
+      .row-card {
+        flex-direction: column;
+        height: 40rem;
+        /* align-items: flex-start; */
+
+        div {
+          width: 100%;
           div {
-            width: 100%;
-            div {
-              display: flex;
-              flex-direction: row;
-            }
+            display: flex;
+            flex-direction: row;
           }
-          .image {
-            img {
-              /* position: absolute; */
-              height: 50%;
-              top: auto;
-              bottom: -5rem;
-              left: 5rem;
-            }
+        }
+        .image {
+          img {
+            /* position: absolute; */
+            height: 50%;
+            top: auto;
+            bottom: 12%;
+            left: 5rem;
           }
         }
       }
@@ -218,7 +237,7 @@ const Wrapper = styled.section`
   }
   @media (max-width: 768px) {
     padding: 0;
-    margin-top: 26rem;
+    /* margin-top: 26rem; */
     h2 {
       font-weight: 400;
       font-size: 1.8rem;

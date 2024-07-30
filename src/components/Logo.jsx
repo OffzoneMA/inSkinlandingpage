@@ -37,10 +37,6 @@ const Wrapper = styled.div`
     align-items: center;
     gap: 0.4rem;
   }
-  /* if logo is one group */
-  img {
-    width: 9rem;
-  }
   p {
     color: #333;
     width: fit-content;
@@ -48,5 +44,17 @@ const Wrapper = styled.div`
     font-size: 0.7rem;
     font-weight: 600;
     line-height: normal;
+  }
+  /* if logo is one group */
+  img {
+    width: 9rem;
+  }
+  @media (max-width: 768px) {
+    img {
+      width: 6.5rem;
+    }
+    p {
+      font-size: 0.6rem;
+    }
   }
 `;

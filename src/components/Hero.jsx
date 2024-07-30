@@ -41,6 +41,7 @@ const Wrapper = styled.section`
     background: var(--gradient);
     height: auto;
     max-height: fit-content;
+    padding: 1rem 1.2rem;
     padding-bottom: 0;
   }
   .container {
@@ -121,10 +122,11 @@ const Wrapper = styled.section`
         padding-top: 25%;
         h1 {
           text-align: center;
-          font-size: 2.5rem;
+          font-size: 2.55rem;
         }
         p {
           text-align: center;
+          font-size: 1rem;
         }
         .links {
           align-self: center;

@@ -113,6 +113,15 @@ const Wrapper = styled.section`
       gap: 0.3rem;
     }
     @media (max-width: 768px) {
+      .title {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
       .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -125,7 +134,7 @@ const Wrapper = styled.section`
   }
   @media (max-width: 768px) {
     padding: 2rem 1rem;
-    height: 120vh;
+    height: auto;
   }
 `;
 const doc = {

@@ -4,6 +4,7 @@ import ButtonPrimary from "./ButtonPrimary";
 import Logo from "./Logo";
 import { useLanguage } from "../LanguageContext";
 import { Link } from "react-router-dom";
+import SubmitButton from "./SubmitButton";
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -50,7 +51,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="btn">
-              <ButtonPrimary
+              <SubmitButton
                 text={doc[language].contact.button}
                 icon={"../image/arrow-right.svg"}
               />
@@ -202,6 +203,8 @@ const Wrapper = styled.div`
           position: absolute;
           left: 2rem;
           top: 4rem;
+          width: 3.5rem;
+          height: 3.5rem;
         }
       }
       .separator {
@@ -278,6 +281,13 @@ const Wrapper = styled.div`
           line-height: 2.32394rem;
           letter-spacing: -0.02rem;
         }
+        @media (max-width: 768px) {
+          .question {
+            font-size: 1.5rem;
+            padding-left: 3.5rem !important;
+            margin-top: -1.4rem !important;
+          }
+        }
         input,
         textarea {
           padding: 0.5rem 1rem;
@@ -288,6 +298,7 @@ const Wrapper = styled.div`
           height: 3rem;
           &:focus {
             outline: none;
+            box-shadow: 0px 0px 0px 4px rgba(234, 100, 121, 0.25);
           }
         }
         textarea {
@@ -322,16 +333,18 @@ const Wrapper = styled.div`
           display: none;
         }
         h1 {
+          font-size: 1.4rem;
           text-align: center;
           /* width: 100%; */
           padding: 1rem;
           align-self: center;
           position: relative;
           z-index: 999;
+          margin-bottom: 2.5rem;
         }
       }
       .pic1 {
-        left: -8rem;
+        left: -5.5rem;
         top: 8rem;
         width: 60%;
         z-index: 0;
@@ -444,7 +457,7 @@ const doc = {
         "Subject",
         "Write Your Message",
       ],
-      button: "send message",
+      button: ["send message", "Sent"],
     },
     links: {
       project: {
@@ -478,7 +491,7 @@ const doc = {
         "Objet",
         "Rédigez votre message",
       ],
-      button: "envoyer le message",
+      button: ["envoyer le message", "Envoyé"],
     },
     links: {
       project: {

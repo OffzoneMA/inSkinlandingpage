@@ -114,6 +114,7 @@ const Wrapper = styled.section`
   padding: 1.8rem 5rem;
   background: var(--purple-light);
   position: relative;
+  overflow: hidden;
   .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -214,27 +215,33 @@ const Wrapper = styled.section`
     }
     @media (max-width: 768px) {
       .pic4 {
-        left: -3rem;
+        left: -2rem;
+        width: 27%;
       }
 
       .pic5 {
-        left: -2rem;
+        left: -1.7rem;
+        width: 25%;
       }
 
       .pic6 {
         left: -2rem;
+        width: 23%;
       }
 
       .pic7 {
-        right: -3rem;
+        right: -1rem;
+        width: 23%;
       }
 
       .pic8 {
         right: -2rem;
+        width: 21%;
       }
 
       .pic9 {
         right: -1rem;
+        width: 22%;
       }
     }
   }

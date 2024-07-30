@@ -52,15 +52,20 @@ const Wrapper = styled.div`
       display: none;
     }
   }
+  .btn {
+    display: flex;
+    gap: 1rem;
+  }
   @media (min-width: 2300px) {
     .links a {
       font-size: 2rem;
       /* font-size: clamp(1.5rem, 1vw, 3rem); */
     }
   }
-  .btn {
-    display: flex;
-    gap: 1rem;
+  @media (max-width: 768px) {
+    .btn {
+      gap: 0.1rem;
+    }
   }
   .languageBtn {
     color: var(--white);

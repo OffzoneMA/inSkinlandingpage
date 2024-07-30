@@ -14,12 +14,12 @@ export default function Section1() {
         <div className="center">
           <h1 className="number">82,915,082</h1>
           <p>{doc[language].p} </p>
-          {/* <img className="icon2 icon" src="../image/heartemoji.svg" alt="" />
-          <img className="icon1 icon" src="../image/cosmetic111.svg" alt="" /> */}
+          <img className="icon2 icon" src="../image/heartemoji.svg" alt="" />
+          <img className="icon1 icon" src="../image/cosmetic111.svg" alt="" />
         </div>
         <ButtonPrimary text={doc[language].btn} />
-        {/* <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
-        <img src="../image/cosmetic3.svg" alt="" className="pic pic3" /> */}
+        <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
+        <img src="../image/cosmetic3.svg" alt="" className="pic pic3" />
       </div>
       <div className="image">
         {/* <img src="../image/Ellipse.svg" alt="" /> */}
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   /* height: 100vh; */
   max-height: var(--max-height);
   margin: 4rem auto;
-  margin-bottom: 0;
+  margin-bottom: -2rem;
   color: var(--blue-dark);
   width: 100%;
   .pic {
@@ -83,12 +83,19 @@ const Wrapper = styled.div`
     }
     @media (max-width: 768px) {
       padding: 2rem 1rem;
+      .number {
+        font-size: 2.75rem;
+      }
       h2 {
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 500;
       }
       h3 {
         width: 100%;
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.8rem;
       }
     }
   }
@@ -116,11 +123,11 @@ const Wrapper = styled.div`
       position: absolute;
       top: 0;
       left: 0;
-      width: 25%;
+      width: 30%;
       animation: moveUpDown 3s ease-in-out infinite;
     }
     .pic2 {
-      left: 24rem;
+      left: 18rem;
       top: 18rem;
     }
     .pic3 {
