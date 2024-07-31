@@ -79,6 +79,7 @@ export default function Footer() {
                     </a>
                   ))}
                 </div>
+
                 <div className="info">
                   <h4>{doc[language].links.usefulLinks.title}</h4>
                   {doc[language].links.usefulLinks.items.map((item, index) => (
