@@ -12,7 +12,9 @@ export default function Navbar() {
       <Logo />
       <div className="links">
         <a href="/">{doc[language].title1}</a>
-        <a href="/">{doc[language].title2}</a>
+        <a className="selected-link" href="/">
+          {doc[language].title2}
+        </a>
         <a href="/">{doc[language].title3}</a>
         <a href="/">{doc[language].title4}</a>
       </div>
@@ -36,10 +38,19 @@ const Wrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 3rem;
+  & > :first-child,
+  & > :last-child {
+    flex: 0 0 auto;
+  }
+  & > :nth-child(2) {
+    flex: 1;
+  }
+
   /* z-index: 999; */
   .links {
     display: flex;
     gap: 1.7rem;
+    justify-self: start;
     a {
       color: var(--blue-dark);
       font-size: clamp(1rem, 1.4vw, 2rem);
@@ -75,6 +86,9 @@ const Wrapper = styled.div`
     background: var(--pink-light);
     padding: 0.75rem 1rem;
     cursor: pointer;
+  }
+  .selected-link {
+    color: var(--pink) !important;
   }
 `;
 const doc = {

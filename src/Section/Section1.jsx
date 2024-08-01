@@ -14,8 +14,9 @@ export default function Section1() {
         <div className="center">
           <h1 className="number">82,915,082</h1>
           <p>{doc[language].p} </p>
-          <img className="icon2 icon" src="../image/heartemoji.svg" alt="" />
           <img className="icon1 icon" src="../image/cosmetic111.svg" alt="" />
+          <img className="icon2 icon" src="../image/heartemoji.svg" alt="" />
+          <img className="icon3 icon" src="../image/cosmetic4.svg" alt="" />
         </div>
         <ButtonPrimary text={doc[language].btn} />
         <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
@@ -144,6 +145,18 @@ const Wrapper = styled.div`
     position: absolute;
     right: -18rem;
     top: 0rem;
+  }
+  .icon3 {
+    position: absolute;
+    left: -11rem;
+    top: 10rem;
+    width: 45%;
+  }
+  @media (max-width: 768px) {
+    .icon3 {
+      top: 12rem;
+      left: -5rem;
+    }
   }
   .icon {
     animation: moveUpDown 2.4s ease-in-out infinite;

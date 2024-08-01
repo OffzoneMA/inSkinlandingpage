@@ -215,15 +215,10 @@ const Wrapper = styled.div`
       }
       .infos {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         .info {
           display: flex;
           flex-direction: column;
-          @media (max-width: 768px) {
-            a {
-              font-size: 0.8rem;
-            }
-          }
         }
         h4 {
           color: var(--gray-800);
@@ -241,6 +236,16 @@ const Wrapper = styled.div`
           font-style: normal;
           font-weight: 400;
           line-height: 1.5625rem;
+        }
+        @media (max-width: 768px) {
+          .info {
+            a {
+              font-size: 0.7rem;
+            }
+          }
+          h4 {
+            font-size: 1rem;
+          }
         }
         .items {
           display: flex;
