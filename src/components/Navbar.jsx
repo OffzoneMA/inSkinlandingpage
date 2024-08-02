@@ -53,7 +53,7 @@ const Wrapper = styled.div`
     justify-self: start;
     a {
       color: var(--blue-dark);
-      font-size: clamp(1rem, 1.4vw, 2rem);
+      font-size: 1.3rem;
     }
   }
   @media (max-width: 768px) {

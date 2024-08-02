@@ -32,6 +32,7 @@ const Wrapper = styled.button`
   transition: 0.3s;
   border: none;
   color: var(--white);
+  font-size: 1rem;
   &:hover {
     background: var(--pink-dark);
   }
