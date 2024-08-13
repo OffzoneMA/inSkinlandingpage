@@ -11,12 +11,12 @@ export default function SubmitButton({ text, icon, func }) {
       href=""
       onClick={(e) => {
         e.preventDefault();
-        setTimeout(() => {
-          if (buttonRef.current) {
-            buttonRef.current.style.backgroundColor = "#28B617";
-            buttonRef.current.innerText = `${text[1]} `;
-          }
-        }, 1000);
+        // setTimeout(() => {
+        //   if (buttonRef.current) {
+        //     buttonRef.current.style.backgroundColor = "#28B617";
+        //     buttonRef.current.innerText = `${text[1]} `;
+        //   }
+        // }, 1000);
       }}
     >
       {text[0]}

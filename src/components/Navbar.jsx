@@ -12,7 +12,7 @@ export default function Navbar() {
       <Logo />
       <div className="links">
         <a href="/">{doc[language].title1}</a>
-        <a className="selected-link" href="/">
+        <a className="" href="/">
           {doc[language].title2}
         </a>
         <a href="/">{doc[language].title3}</a>
@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="btn">
         <ButtonPrimary text={doc[language].btn} />
         <ButtonPrimary
-          text={language == "en" ? "FR" : "ENG"}
+          text={language === "en" ? "FR" : "EN"}
           func={toggleLanguage}
         />
       </div>
@@ -53,7 +53,11 @@ const Wrapper = styled.div`
     justify-self: start;
     a {
       color: var(--blue-dark);
-      font-size: 1.3rem;
+      font-size: 1rem;
+      transition: 0.3s;
+      &:hover {
+        color: var(--pink);
+      }
     }
   }
   @media (max-width: 768px) {
@@ -67,12 +71,12 @@ const Wrapper = styled.div`
     display: flex;
     gap: 1rem;
   }
-  @media (min-width: 2300px) {
+  /* @media (min-width: 2300px) {
     .links a {
+      font-size: clamp(1.5rem, 1vw, 3rem);
       font-size: 2rem;
-      /* font-size: clamp(1.5rem, 1vw, 3rem); */
     }
-  }
+  } */
   @media (max-width: 768px) {
     .btn {
       gap: 0.1rem;
@@ -86,9 +90,6 @@ const Wrapper = styled.div`
     background: var(--pink-light);
     padding: 0.75rem 1rem;
     cursor: pointer;
-  }
-  .selected-link {
-    color: var(--pink) !important;
   }
 `;
 const doc = {

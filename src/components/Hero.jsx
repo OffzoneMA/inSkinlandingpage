@@ -31,6 +31,7 @@ function Hero() {
 }
 const Wrapper = styled.section`
   padding: 1.8rem 5rem;
+  padding-top: 1.2rem;
   height: 100vh;
   max-height: 1300px;
   background: url("/image/Background-hero.svg") center/cover no-repeat;
@@ -82,7 +83,7 @@ const Wrapper = styled.section`
       justify-content: center;
       align-items: flex-start;
       width: 43.5rem;
-      gap: 3.25rem;
+      gap: 1.5rem;
       padding: 10rem 3rem 0rem 0rem;
       h1 {
         font-family: "Inter";

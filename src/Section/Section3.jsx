@@ -49,15 +49,17 @@ export default function Section3() {
   );
 }
 const Wrapper = styled.section`
-  height: 100vh;
+  /* height: 100vh; */
   /* min-height: 100vh; */
   margin: 0 auto;
   /* display: block; */
   /* padding: 1.8rem 5rem; */
-  max-height: var(--max-height);
+  /* max-height: var(--max-height); */
+  margin-bottom: 2rem;
   .container {
     max-width: var(--max-width);
     margin: 0 auto;
+
     .title {
       color: var(--blue-dark);
       font-feature-settings: "liga" off;
@@ -70,7 +72,7 @@ const Wrapper = styled.section`
     h2 {
       color: #111827;
       font-family: var(--ff-primary);
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       font-style: normal;
       line-height: 1.75rem;
     }
@@ -78,7 +80,7 @@ const Wrapper = styled.section`
       color: var(--Neutral-700);
       font-family: var(--ff-primary);
       font-style: normal;
-      font-size: 0.8rem;
+      font-size: 18px;
       font-weight: 300;
       line-height: 1.5rem;
     }
@@ -110,7 +112,7 @@ const Wrapper = styled.section`
     .info {
       display: flex;
       flex-direction: column;
-      gap: 0.3rem;
+      gap: 0.5rem;
     }
     @media (max-width: 768px) {
       .title {

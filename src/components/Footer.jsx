@@ -124,16 +124,16 @@ export default function Footer() {
           </div>
           <div className="social-links">
             <a href="">
-              <img src="../image/Frame24.svg" alt="" />
+              <img src="../image/instagram.svg" alt="" />
             </a>
             <a href="">
-              <img src="../image/Frame25.svg" alt="" />
+              <img src="../image/facebook.svg" alt="" />
             </a>
             <a href="">
-              <img src="../image/Frame26.svg" alt="" />
+              <img src="../image/twitter.svg" alt="" />
             </a>
             <a href="">
-              <img src="../image/Frame27.svg" alt="" />
+              <img src="../image/linkedin.svg" alt="" />
             </a>
           </div>
         </div>
@@ -219,6 +219,12 @@ const Wrapper = styled.div`
         .info {
           display: flex;
           flex-direction: column;
+          a {
+            transition: 0.3s;
+            &:hover {
+              color: #000;
+            }
+          }
         }
         h4 {
           color: var(--gray-800);
@@ -404,7 +410,7 @@ const Wrapper = styled.div`
       .copyright {
         p,
         a {
-          color: #000;
+          color: var(--gray-600);
           text-align: center;
           font-family: var(--ff-primary);
           font-size: 1rem;
@@ -412,11 +418,27 @@ const Wrapper = styled.div`
           font-weight: 400;
           line-height: 82%;
           display: inline-block;
+          transition: 0.3s;
+          &:hover {
+            color: #000;
+          }
         }
       }
       .social-links {
         display: flex;
         gap: 1rem;
+        a {
+          background: var(--pink);
+          height: 44px;
+          width: 44px;
+          display: grid;
+          place-items: center;
+          border-radius: 50%;
+          transition: 0.3s;
+          &:hover {
+            background: var(--pink-dark);
+          }
+        }
       }
     }
     @media (max-width: 768px) {

@@ -17,6 +17,7 @@ export default function Section1() {
           <img className="icon1 icon" src="../image/cosmetic111.svg" alt="" />
           <img className="icon2 icon" src="../image/heartemoji.svg" alt="" />
           <img className="icon3 icon" src="../image/cosmetic4.svg" alt="" />
+          <img className="icon4 icon" src="../image/loveIcon.svg" alt="" />
         </div>
         <ButtonPrimary text={doc[language].btn} />
         <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
@@ -33,7 +34,7 @@ const Wrapper = styled.div`
   /* height: 100vh; */
   max-height: var(--max-height);
   margin: 4rem auto;
-  margin-bottom: -2rem;
+  margin-bottom: -5rem;
   color: var(--blue-dark);
   width: 100%;
   .pic {
@@ -113,6 +114,8 @@ const Wrapper = styled.div`
   }
   @media (max-width: 768px) {
     margin: 0;
+    margin-bottom: -8rem;
+
     position: relative;
     overflow: hidden;
     .image {
@@ -150,6 +153,12 @@ const Wrapper = styled.div`
     position: absolute;
     left: -11rem;
     top: 10rem;
+    width: 45%;
+  }
+  .icon4 {
+    position: absolute;
+    right: -10rem;
+    top: 12rem;
     width: 45%;
   }
   @media (max-width: 768px) {

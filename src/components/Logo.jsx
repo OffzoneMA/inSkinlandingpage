@@ -20,7 +20,7 @@ export default function Logo() {
         <img src="../image/subtract6.svg" alt="" /> */}
         <img src="../image/logo.svg" alt="" />
       </div>
-      <p>Unveil the elegance</p>
+      {/* <p>Unveil the elegance</p> */}
     </Wrapper>
   );
 }
