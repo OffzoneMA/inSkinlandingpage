@@ -25,6 +25,10 @@ function Hero() {
         <div className="imgC">
           <img src="../image/Background-hero.svg" alt="" />
         </div>
+
+        <div className="circle2">
+          <img className="circleImg" src="../image/parfum-hero.svg" alt="" />
+        </div>
       </div>
     </Wrapper>
   );
@@ -34,10 +38,10 @@ const Wrapper = styled.section`
   padding-top: 1.2rem;
   height: 100vh;
   max-height: 1300px;
-  background: url("/image/Background-hero.svg") center/cover no-repeat;
+  background: var(--gradient);
+  /* background: url("/image/parfum-effect.svg") center/contain no-repeat; */
   /* display: flex;
   flex-direction: column; */
-  overflow-x: hidden;
   @media (max-width: 768px) {
     background: var(--gradient);
     height: auto;
@@ -45,6 +49,22 @@ const Wrapper = styled.section`
     padding: 1rem 1.2rem;
     padding-bottom: 0;
   }
+  overflow: hidden;
+  position: relative;
+  .circle2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   .container {
     .imgC {
       display: none;
@@ -83,7 +103,6 @@ const Wrapper = styled.section`
       justify-content: center;
       align-items: flex-start;
       width: 43.5rem;
-      gap: 1.5rem;
       padding: 10rem 3rem 0rem 0rem;
       h1 {
         font-family: "Inter";
@@ -94,6 +113,8 @@ const Wrapper = styled.section`
         letter-spacing: -0.09375rem;
         color: var(--blue-dark);
         font-feature-settings: "liga" off;
+        margin-bottom: 1rem;
+        z-index: 1;
       }
       p {
         color: var(--Neutral-700, #374151);
@@ -103,6 +124,8 @@ const Wrapper = styled.section`
         font-style: normal;
         font-weight: 400;
         line-height: 1.75rem;
+        margin-bottom: 3.25rem;
+        z-index: 1;
       }
       .links {
         display: flex;

@@ -53,11 +53,13 @@ const Wrapper = styled.div`
     justify-self: start;
     a {
       color: var(--blue-dark);
+      font-weight: 500;
       font-size: 1rem;
       transition: 0.3s;
       &:hover {
         color: var(--pink);
       }
+      z-index: 1;
     }
   }
   @media (max-width: 768px) {
@@ -70,6 +72,7 @@ const Wrapper = styled.div`
   .btn {
     display: flex;
     gap: 1rem;
+    z-index: 1;
   }
   /* @media (min-width: 2300px) {
     .links a {

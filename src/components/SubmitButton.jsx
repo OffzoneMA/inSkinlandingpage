@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useRef } from "react";
-export default function SubmitButton({ text, icon, func }) {
+import { useRef, useState } from "react";
+export default function SubmitButton({ text, icon, func, data }) {
   const buttonRef = useRef(null);
 
   return (
@@ -11,12 +11,15 @@ export default function SubmitButton({ text, icon, func }) {
       href=""
       onClick={(e) => {
         e.preventDefault();
-        // setTimeout(() => {
-        //   if (buttonRef.current) {
-        //     buttonRef.current.style.backgroundColor = "#28B617";
-        //     buttonRef.current.innerText = `${text[1]} `;
-        //   }
-        // }, 1000);
+        setTimeout(() => {
+          if (data.name && data.email && data.message && data.subject) {
+            if (buttonRef.current) {
+              buttonRef.current.style.backgroundColor = "#28B617";
+              buttonRef.current.innerText = `${text[1]} `;
+            }
+          }
+          console.log(data);
+        }, 1000);
       }}
     >
       {text[0]}

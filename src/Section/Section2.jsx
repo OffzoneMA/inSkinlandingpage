@@ -173,7 +173,7 @@ const Wrapper = styled.section`
           overflow: visible;
           z-index: 999;
           top: 0;
-          right: 0;
+          right: -4.67rem;
         }
       }
     }
@@ -203,14 +203,24 @@ const Wrapper = styled.section`
         align-items: center;
         gap: 0.5rem;
       }
-
+      .card1 {
+        .image {
+          /* transform: translateY(-10%); */
+          margin-top: -3rem;
+        }
+      }
+      .card {
+        height: 30rem;
+      }
       p {
         font-size: 0.8rem;
         margin-left: 3.5rem;
+        margin-bottom: -1.5rem;
+        line-height: 1.3125rem;
       }
       .row-card {
         flex-direction: column;
-        height: 40rem;
+        height: 30rem;
         /* align-items: flex-start; */
 
         div {
@@ -223,10 +233,10 @@ const Wrapper = styled.section`
         .image {
           img {
             /* position: absolute; */
-            height: 50%;
+            height: 58%;
             top: auto;
-            bottom: 12%;
-            left: 5rem;
+            bottom: -0.2rem;
+            left: 4rem;
           }
         }
       }

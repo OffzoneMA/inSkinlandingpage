@@ -9,7 +9,7 @@ export default function Section3() {
     <Wrapper>
       <div className="container">
         <div className="row">
-          <img src="../image/phone.svg" alt="" />
+          <img className="phone" src="../image/phone.svg" alt="" />
           <div className="column">
             <div className="title">{doc[language].header}</div>
             <div className="grid">
@@ -82,13 +82,16 @@ const Wrapper = styled.section`
       font-style: normal;
       font-size: 18px;
       font-weight: 300;
-      line-height: 1.5rem;
+      line-height: 1.75rem;
+      width: 21.83rem;
     }
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       gap: 3.5rem;
+      column-gap: 1rem;
+      margin-left: -1rem;
     }
     .row {
       display: flex;
@@ -114,15 +117,28 @@ const Wrapper = styled.section`
       flex-direction: column;
       gap: 0.5rem;
     }
+    .phone {
+      margin-left: -4rem;
+    }
     @media (max-width: 768px) {
+      /* padding: 0; */
+      .card {
+        gap: 1rem;
+      }
+      .icon {
+        width: 3rem;
+        height: 3rem;
+        margin-left: 1rem;
+      }
       .title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
       h2 {
         font-size: 1.2rem;
       }
       p {
         font-size: 0.8rem;
+        width: 103%;
       }
       .grid {
         grid-template-columns: 1fr;

@@ -5,9 +5,23 @@ import Logo from "./Logo";
 import { useLanguage } from "../LanguageContext";
 import { Link } from "react-router-dom";
 import SubmitButton from "./SubmitButton";
-
+import { useState } from "react";
 export default function Footer() {
   const { language } = useLanguage();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   return (
     <Wrapper>
@@ -33,20 +47,24 @@ export default function Footer() {
                   type="text"
                   className="name"
                   placeholder={doc[language].contact.inputs[0]}
+                  onChange={handleChange}
                 />
                 <input
                   type="email"
                   className="email"
                   placeholder={doc[language].contact.inputs[1]}
+                  onChange={handleChange}
                 />
                 <input
                   type="text"
                   className="subject"
                   placeholder={doc[language].contact.inputs[2]}
+                  onChange={handleChange}
                 />
                 <textarea
                   className="message"
                   placeholder={doc[language].contact.inputs[3]}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -54,6 +72,7 @@ export default function Footer() {
               <SubmitButton
                 text={doc[language].contact.button}
                 icon={"../image/arrow-right.svg"}
+                data={formData}
               />
             </div>
             <div className="separator"></div>

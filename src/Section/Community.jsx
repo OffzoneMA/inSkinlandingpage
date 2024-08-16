@@ -246,8 +246,7 @@ const Wrapper = styled.section`
     }
   }
   @media (max-width: 768px) {
-    margin-top: 40rem;
-    height: 120vh;
+    height: auto;
     padding: 2rem 3rem;
   }
 `;

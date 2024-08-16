@@ -23,8 +23,10 @@ export default function Section1() {
         <img src="../image/cosmetic2.svg" alt="" className="pic pic2" />
         <img src="../image/cosmetic3.svg" alt="" className="pic pic3" />
       </div>
-      <div className="image">
-        {/* <img src="../image/Ellipse.svg" alt="" /> */}
+      <div className="image-container">
+        <div className="image">
+          {/* <img src="../image/Ellipse.svg" alt="" /> */}
+        </div>
       </div>
     </Wrapper>
   );
@@ -101,26 +103,38 @@ const Wrapper = styled.div`
       }
     }
   }
+  .image-container {
+    height: 424px;
+    overflow: hidden;
+    margin-bottom: 11rem;
+  }
   .image {
     background-image: url("/image/Ellipse.svg");
-    height: 100vh;
+    height: 43.75rem;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     margin: 0 auto;
     display: block;
-    width: 100%;
-    max-width: var(--max-width);
+    transform: translateX(-88px);
+    /* width: 100%; */
+    max-width: calc(var(--max-width) + 1rem);
     max-height: 700px;
   }
   @media (max-width: 768px) {
     margin: 0;
-    margin-bottom: -8rem;
+    /* margin-bottom: -8rem; */
 
     position: relative;
     overflow: hidden;
+    .image-container {
+      height: 295px;
+      overflow: hidden;
+      margin-bottom: 7rem;
+    }
     .image {
-      width: 200%;
-      transform: translateX(-25%);
+      width: 230%;
+      transform: translateX(-33%);
+      background-size: contain;
     }
     .pic {
       display: block;
@@ -137,6 +151,9 @@ const Wrapper = styled.div`
     .pic3 {
       left: -2rem;
       top: 19rem;
+    }
+    .icon {
+      display: none;
     }
   }
   .icon1 {
@@ -169,6 +186,7 @@ const Wrapper = styled.div`
   }
   .icon {
     animation: moveUpDown 2.4s ease-in-out infinite;
+    z-index: 999;
   }
   @keyframes moveUpDown {
     0%,

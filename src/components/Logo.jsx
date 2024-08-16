@@ -30,6 +30,8 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  z-index: 1;
+
   cursor: pointer;
   .container {
     display: flex;
