@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useLanguage } from "../LanguageContext";
-
+import { useEffect } from "react";
 export default function TermsOfUse() {
   const { language } = useLanguage();
   function createMarkup(text) {
@@ -9,9 +9,12 @@ export default function TermsOfUse() {
     // Ensure to sanitize `text` here to prevent XSS attacks.
     return { __html: text };
   }
+  useEffect(() => {
+    document.getElementById("TermsOfUse").scrollIntoView();
+  }, []);
   return (
     <Wrapper>
-      <div className="container">
+      <div className="container" id="TermsOfUse">
         <h1>{doc[language].header}</h1>
         {doc[language].content.map((section, index) => (
           <>

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useLanguage } from "../LanguageContext";
-
 export default function PrivacyPolicy() {
   const { language } = useLanguage();
   function createMarkup(text) {
@@ -9,9 +8,12 @@ export default function PrivacyPolicy() {
     // Ensure to sanitize `text` here to prevent XSS attacks.
     return { __html: text };
   }
+  useEffect(() => {
+    document.getElementById("PrivacyPolicy").scrollIntoView();
+  }, []);
   return (
     <Wrapper>
-      <div className="container">
+      <div className="container" id="PrivacyPolicy">
         <h1>{doc[language].header}</h1>
         {doc[language].content.map((section, index) => (
           <>

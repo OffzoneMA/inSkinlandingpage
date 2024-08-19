@@ -46,23 +46,27 @@ export default function Footer() {
                 <input
                   type="text"
                   className="name"
+                  name="name"
                   placeholder={doc[language].contact.inputs[0]}
                   onChange={handleChange}
                 />
                 <input
                   type="email"
                   className="email"
+                  name="email"
                   placeholder={doc[language].contact.inputs[1]}
                   onChange={handleChange}
                 />
                 <input
                   type="text"
                   className="subject"
+                  name="subject"
                   placeholder={doc[language].contact.inputs[2]}
                   onChange={handleChange}
                 />
                 <textarea
                   className="message"
+                  name="message"
                   placeholder={doc[language].contact.inputs[3]}
                   onChange={handleChange}
                 />
@@ -129,17 +133,9 @@ export default function Footer() {
           </div> */}
           <div className="copyright">
             <p>{doc[language].copyrights[0]}</p> |{" "}
-            <Link to="/privacy-policy" onClick={() => window.scrollTo(0, 0)}>
-              {doc[language].copyrights[1]}
-            </Link>{" "}
-            |{" "}
-            <Link to="/terms-of-use" onClick={() => window.scrollTo(0, 0)}>
-              {doc[language].copyrights[2]}
-            </Link>{" "}
-            |{" "}
-            <Link to="/legal-notice" onClick={() => window.scrollTo(0, 0)}>
-              {doc[language].copyrights[3]}
-            </Link>
+            <Link to="/privacy-policy">{doc[language].copyrights[1]}</Link> |{" "}
+            <Link to="/terms-of-use">{doc[language].copyrights[2]}</Link> |{" "}
+            <Link to="/legal-notice">{doc[language].copyrights[3]}</Link>
           </div>
           <div className="social-links">
             <a href="">

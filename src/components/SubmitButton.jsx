@@ -18,7 +18,6 @@ export default function SubmitButton({ text, icon, func, data }) {
               buttonRef.current.innerText = `${text[1]} `;
             }
           }
-          console.log(data);
         }, 1000);
       }}
     >
