@@ -173,7 +173,7 @@ const Wrapper = styled.section`
           overflow: visible;
           z-index: 999;
           top: 0;
-          right: -4.67rem;
+          right: -6.6%;
         }
       }
     }
