@@ -33,6 +33,7 @@ const Wrapper = styled.div`
   padding: 0 2rem;
   max-width: 1480px;
   margin: 0 auto;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
