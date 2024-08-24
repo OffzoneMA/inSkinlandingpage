@@ -50,6 +50,7 @@ const Wrapper = styled.div`
   /* if logo is one group */
   img {
     width: 9rem;
+    transform: translateY(-0.6rem);
   }
   @media (max-width: 768px) {
     img {
