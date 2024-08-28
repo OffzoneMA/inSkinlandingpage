@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap");
-
 :root {
   /* Font styles */
   --ff-primary: "DM Sans";
@@ -61,7 +60,7 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--ff-primary) !important;
+  font-family: var(--ff-primary);
   /* font-family:;
   color:; */
   overflow-x: hidden;
