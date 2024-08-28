@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     h3 {
       text-align: center;
       font-feature-settings: "liga" off;
-      font-family: var(--ff-primary);
+      font-family: var(--ff-primary) !important;
       font-size: 1.125rem;
       font-style: normal;
       font-weight: 400;
@@ -73,7 +73,7 @@ const Wrapper = styled.div`
     .number {
       color: #202020;
       text-align: center;
-      font-family: var(--ff-primary);
+      font-family: var(--ff-primary) !important;
       font-size: 3.75rem;
       font-style: normal;
       font-weight: 700;

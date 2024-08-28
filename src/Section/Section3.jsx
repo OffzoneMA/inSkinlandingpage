@@ -71,14 +71,14 @@ const Wrapper = styled.section`
     }
     h2 {
       color: #111827;
-      font-family: var(--ff-primary);
+      font-family: var(--ff-primary) !important;
       font-size: 1.55rem;
       font-style: normal;
       line-height: 1.75rem;
     }
     p {
       color: var(--Neutral-700);
-      font-family: var(--ff-primary);
+      font-family: var(--ff-primary) !important;
       font-style: normal;
       font-size: 18px;
       font-weight: 300;

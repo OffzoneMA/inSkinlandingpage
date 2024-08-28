@@ -61,7 +61,7 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-primary) !important;
   /* font-family:;
   color:; */
   overflow-x: hidden;

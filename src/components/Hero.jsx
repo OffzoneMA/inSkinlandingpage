@@ -119,7 +119,7 @@ const Wrapper = styled.section`
       p {
         color: var(--Neutral-700, #374151);
         font-feature-settings: "liga" off;
-        font-family: var(--ff-primary);
+        font-family: var(--ff-primary) !important;
         font-size: 1.125rem;
         font-style: normal;
         font-weight: 400;

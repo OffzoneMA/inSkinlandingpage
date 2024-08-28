@@ -252,7 +252,7 @@ const Wrapper = styled.div`
         }
         a {
           color: var(--gray-600);
-          font-family: var(--ff-primary);
+          font-family: var(--ff-primary) !important;
           font-size: 1rem;
           font-style: normal;
           font-weight: 400;
@@ -427,7 +427,7 @@ const Wrapper = styled.div`
         a {
           color: var(--gray-600);
           text-align: center;
-          font-family: var(--ff-primary);
+          font-family: var(--ff-primary) !important;
           font-size: 1rem;
           font-style: normal;
           font-weight: 400;

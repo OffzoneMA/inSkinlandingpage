@@ -42,7 +42,7 @@ const Wrapper = styled.section`
     }
     .comment {
       color: #202020;
-      font-family: var(--ff-primary);
+      font-family: var(--ff-primary) !important;
       text-align: left;
       font-size: 1rem;
       font-style: normal;

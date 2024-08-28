@@ -117,7 +117,7 @@ const Wrapper = styled.section`
           p {
             margin-top: 1.5rem;
             color: var(--gray-400);
-            font-family: var(--ff-primary);
+            font-family: var(--ff-primary) !important;
             font-style: normal;
             line-height: 1.75rem;
             font-weight: 100;
@@ -126,7 +126,7 @@ const Wrapper = styled.section`
           }
           span {
             color: var(--gray-600);
-            font-family: var(--ff-primary);
+            font-family: var(--ff-primary) !important;
             font-size: 1.25rem;
             font-style: normal;
             font-weight: 700;

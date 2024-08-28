@@ -135,7 +135,7 @@ const Wrapper = styled.section`
     p {
       color: var(--white);
       text-align: center;
-      font-family: var(--ff-primary);
+      font-family: var(--ff-primary) !important;
       font-size: 1.125rem;
       font-style: normal;
       font-weight: 400;
