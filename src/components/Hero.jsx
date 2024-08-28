@@ -105,14 +105,13 @@ const Wrapper = styled.section`
       width: 43.5rem;
       padding: 10rem 3rem 0rem 0rem;
       h1 {
-        font-family: "Inter", sans-serif !important;
+        font-family: "Inter" !important;
         font-size: 3.75rem;
         font-style: normal;
         font-weight: 400;
         line-height: 4.5rem; /* 120% */
         letter-spacing: -0.09375rem;
         color: var(--blue-dark);
-        /* font-feature-settings: "liga" off; */
         margin-bottom: 1rem;
         z-index: 1;
       }
