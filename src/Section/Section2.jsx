@@ -76,7 +76,7 @@ const Wrapper = styled.section`
       padding: 2rem 1rem;
       h1 {
         font-size: 2.2rem;
-        font-weight: 500;
+        font-weight: 700;
       }
     }
   }
@@ -147,7 +147,7 @@ const Wrapper = styled.section`
           height: 3rem;
         }
         h2 {
-          font-weight: 500;
+          font-weight: 700;
           font-size: 1.5rem;
         }
       }

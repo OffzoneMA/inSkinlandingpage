@@ -92,7 +92,7 @@ const Wrapper = styled.div`
       }
       h2 {
         font-size: 1.6rem;
-        font-weight: 500;
+        font-weight: 700;
       }
       h3 {
         width: 100%;

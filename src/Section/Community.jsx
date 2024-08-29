@@ -128,7 +128,7 @@ const Wrapper = styled.section`
       @media (max-width: 768px) {
         text-align: center;
         font-size: 2.25rem;
-        font-weight: 400;
+        font-weight: 700;
       }
     }
     p {
@@ -164,9 +164,11 @@ const Wrapper = styled.section`
     .links {
       display: flex;
       gap: 2rem;
+      z-index: 999;
       img {
         background: var(--dark);
         border-radius: 0.5rem;
+        z-index: 999;
       }
     }
     .comments {

@@ -47,7 +47,7 @@ const Wrapper = styled.section`
     height: auto;
     max-height: fit-content;
     padding: 1rem 1.2rem;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
   }
   overflow: hidden;
   position: relative;
@@ -71,13 +71,15 @@ const Wrapper = styled.section`
     }
     @media (max-width: 768px) {
       .imgC {
-        /* width: 100%;
-        height: 100%; */
         display: block;
-        transform: translateX(calc(-5rem + -200%));
+        height: 110%;
+        transform: translate(calc(-170%), -1rem);
         img {
-          width: 400%;
+          width: 320%;
         }
+      }
+      .circle2 {
+        display: none;
       }
       .img {
         /* display: block;
