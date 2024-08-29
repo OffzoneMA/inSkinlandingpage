@@ -72,10 +72,14 @@ const Wrapper = styled.section`
     @media (max-width: 768px) {
       .imgC {
         display: block;
-        height: 110%;
-        transform: translate(calc(-170%), 0);
+        height: 34rem;
+
         img {
-          width: 325%;
+          width: 180%;
+          transform: translate(calc(-25%), -5rem);
+          /* object-fit: cover; */
+
+          /* width: 200%; */
         }
       }
       .circle2 {
