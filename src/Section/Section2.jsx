@@ -209,6 +209,11 @@ const Wrapper = styled.section`
           margin-top: -3rem;
         }
       }
+      .card2 {
+        .image {
+          width: 80%;
+        }
+      }
       .card {
         height: 30rem;
       }
