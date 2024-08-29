@@ -47,7 +47,7 @@ const Wrapper = styled.section`
     height: auto;
     max-height: fit-content;
     padding: 1rem 1.2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0;
   }
   overflow: hidden;
   position: relative;
@@ -73,9 +73,9 @@ const Wrapper = styled.section`
       .imgC {
         display: block;
         height: 110%;
-        transform: translate(calc(-170%), -1rem);
+        transform: translate(calc(-170%), 0);
         img {
-          width: 320%;
+          width: 325%;
         }
       }
       .circle2 {
