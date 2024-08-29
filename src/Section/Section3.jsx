@@ -68,6 +68,7 @@ const Wrapper = styled.section`
       font-style: normal;
       line-height: 130%;
       letter-spacing: -0.05rem;
+      font-weight: 700;
     }
     h2 {
       color: #111827;

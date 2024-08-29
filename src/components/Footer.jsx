@@ -197,7 +197,7 @@ const Wrapper = styled.div`
         font-family: Inter;
         font-size: 2rem;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 700;
         line-height: 150%;
         letter-spacing: -0.05938rem;
         align-self: stretch;
@@ -304,7 +304,7 @@ const Wrapper = styled.div`
           font-family: Inter;
           font-size: 2rem;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 700;
           line-height: 2.32394rem;
           letter-spacing: -0.02rem;
         }

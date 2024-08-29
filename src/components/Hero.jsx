@@ -108,7 +108,7 @@ const Wrapper = styled.section`
         font-family: var(--ff-inter) !important;
         font-size: 3.75rem;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 700;
         line-height: 4.5rem; /* 120% */
         letter-spacing: -0.09375rem;
         color: var(--blue-dark);

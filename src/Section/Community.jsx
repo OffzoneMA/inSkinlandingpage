@@ -107,14 +107,13 @@ export default function Community() {
   );
 }
 const Wrapper = styled.section`
-  height: 100vh;
-  max-height: var(--max-height);
-  min-height: 500px;
   display: block;
   padding: 1.8rem 5rem;
   background: var(--purple-light);
   position: relative;
   overflow: hidden;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
   .container {
     max-width: var(--max-width);
     margin: 0 auto;
