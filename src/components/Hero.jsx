@@ -105,7 +105,7 @@ const Wrapper = styled.section`
       width: 43.5rem;
       padding: 10rem 3rem 0rem 0rem;
       h1 {
-        font-family: "Inter" !important;
+        font-family: var(--ff-inter) !important;
         font-size: 3.75rem;
         font-style: normal;
         font-weight: 400;
