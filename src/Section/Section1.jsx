@@ -24,9 +24,9 @@ export default function Section1() {
         <img src="../image/cosmetic3.svg" alt="" className="pic pic3" />
       </div>
       <div className="image-container">
-        <div className="image">
-          {/* <img src="../image/Ellipse.svg" alt="" /> */}
-        </div>
+        {/* <div className="image"> */}
+        <img className="image" src="/image/Ellipse.svg" alt="" />
+        {/* </div> */}
       </div>
     </Wrapper>
   );
@@ -34,9 +34,8 @@ export default function Section1() {
 const Wrapper = styled.div`
   /* padding: 1.8rem 5rem; */
   /* height: 100vh; */
-  max-height: var(--max-height);
   margin: 4rem auto;
-  margin-bottom: -5rem;
+  margin-bottom: 5rem;
   color: var(--blue-dark);
   width: 100%;
   .pic {
@@ -68,7 +67,7 @@ const Wrapper = styled.div`
       font-style: normal;
       font-weight: 400;
       line-height: 1.75rem; /* 155.556% */
-      width: 80%;
+      max-width: 60rem;
     }
     .number {
       color: #202020;
@@ -104,21 +103,29 @@ const Wrapper = styled.div`
     }
   }
   .image-container {
-    height: 424px;
+    margin-top: -5rem;
+    height: 35rem;
     overflow: hidden;
-    margin-bottom: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .image {
-    background-image: url("/image/Ellipse.svg");
+    /* background-image: url("/image/Ellipse.svg"); */
+    /* height: 100%; */
     height: 43.75rem;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: var(--max-width + 1rem);
+    /* background-repeat: no-repeat; */
+    background-size: contain;
     margin: 0 auto;
-    display: block;
-    transform: translateX(-88px);
+    /* display: block; */
+    transform: translateY(11rem);
+
+    /* margin: 0 auto; */
     /* width: 100%; */
-    max-width: calc(var(--max-width) + 1rem);
-    max-height: 700px;
+    /* max-width: calc(var(--max-width) + 1rem); */
+    /* max-height: 700px; */
   }
   @media (max-width: 768px) {
     margin: 0;
@@ -127,13 +134,14 @@ const Wrapper = styled.div`
     position: relative;
     overflow: hidden;
     .image-container {
-      height: 295px;
+      height: 20rem;
       overflow: hidden;
-      margin-bottom: 7rem;
+      margin-bottom: 1rem;
     }
     .image {
-      width: 230%;
-      transform: translateX(-33%);
+      width: 750px;
+      /* height: 20rem; */
+      transform: translate(-35px, 6rem);
       background-size: contain;
     }
     .pic {
